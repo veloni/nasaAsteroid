@@ -1,0 +1,46 @@
+.wrapper-header {
+  height: 157px;
+  width: 920px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+
+.wrapper-left-title {
+  height: 157px;
+  width: 414px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.header-main-title {
+  //styleName: Mobile / Сontrol Regular;
+  font-family: Helvetica;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.header-title-about {
+  //styleName: Mobile / Сontrol Regular;
+  font-family: Helvetica;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.word-space-header {
+  word-spacing: 24px;
+};
+
+.wrapper-swticher {
+  padding-top: 35px;
+}

@@ -1,0 +1,26 @@
+.body-main-section {
+  height: 986px;
+  width: 1280px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper-body {
+  height: 986px;
+  width: 920px;
+}
+
+.wrapper-footer {
+  padding-top: 56px;
+  text-align: center;
+  //styleName: Desktop / Body Regular;
+font-family: Helvetica;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0px;
+text-align: center;
+}
+

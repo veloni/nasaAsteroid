@@ -1,0 +1,84 @@
+.wrapper-asteroids {
+
+}
+
+.box-asteroid {
+  height: 200px;
+  width: 920px;
+  border: 1px solid black;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden; 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+}
+
+.dino {
+  height: 56px;
+  width: 48px;
+  position: absolute;
+  bottom: -8px;
+  left: 16px;
+}
+
+.asteroid {
+  position: absolute;
+  left: 50px;
+  top: -15px;
+}
+
+.wrapper-asteroid-data {
+  width: 289px;
+  height: 200px;
+  margin-left: 347px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.wrapper-destroy-asteroid {
+  display: flex;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 24px;
+} 
+
+.button-destroy-asteroid {
+  height: 48px;
+  width: 158px;
+  border-radius: 25px;
+  color:white;
+  background-color: #186DD6;
+  border-color: #186DD6;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.name-asteroid {
+  font-family: Helvetica;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-decoration: underline;
+}
+
+.text-about-asteroid {
+  //styleName: Desktop / Body Regular;
+  font-family: Helvetica;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.appraisal {
+  text-align: center;
+}
