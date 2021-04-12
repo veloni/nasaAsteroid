@@ -4,15 +4,19 @@ import Header from '../Header/Header';
 import Switcher from '../Switcher/Switcher';
 import AboutAsteroid from '../AboutAsteroid/AboutAsteroid';
 import RenderAsteroids from '../RenderAsteroids/RenderAsteroids';
+import BasketDestroyAsteroid from '../BasketDestroyAsteroid/BasketDestroyAsteroid';
 
 import useLoadDataAsteroids from '../../hooks/useLoadDataAsteroids';
 import useSwitcherDistance from '../../hooks/useSwitcherDistance';
-import useOpenAboutAsteroid from '../../hooks/useOpenAboutAsteroid';
+import useOpenComponent from '../../hooks/useOpenComponent';
+import useloadToBasket from '../../hooks/useloadToBasket';
 
 import './Body.scss' 
 
 const Body = () => {
   const [dataAsteroids] = useLoadDataAsteroids();
+
+  const [] = useloadToBasket();
 
   const [
     isLunarDistance,
@@ -27,13 +31,20 @@ const Body = () => {
     setIsOpenAboutAsteroid,
     openAboutAsteroid,
     itemWhoOpen,
-   ] = useOpenAboutAsteroid();
+    isBasket, 
+    setIsBasket,
+    openBasket,
+    openAsteroid,
+   ] = useOpenComponent();
 
   return (
     <div className="body-main-section">
       <div className="wrapper-body">
-        <Header/>
-        {!isOpenAboutAsteroid &&
+        <Header
+          openBasket={openBasket}
+          openAsteroid={openAsteroid}
+        />
+        {!isOpenAboutAsteroid && !isBasket &&
           <div>
             <Switcher
               isLunarDistance={isLunarDistance}
@@ -51,9 +62,13 @@ const Body = () => {
               openAboutAsteroid={openAboutAsteroid}
             />
           </div>}
-          {isOpenAboutAsteroid &&
+          {isOpenAboutAsteroid && !isBasket &&
             <AboutAsteroid
               itemWhoOpen={itemWhoOpen}
+            />
+          }
+          {!isOpenAboutAsteroid && isBasket &&
+            <BasketDestroyAsteroid
             />
           }
         <footer className="wrapper-footer">
