@@ -3,7 +3,13 @@ import React from 'react';
 import Dino from './svg/Dino.svg';
 import AsteroidSvg from './svg/Asteroid.svg'
 
-import { dateAsteroid }  from '../../helper';
+import { 
+  nameAsteroid,
+  dateAsteroid, 
+  distanceAsteroidLunar,
+  sizeAsteroid,
+}  from '../../helper';
+
 
 import './Asteroid.scss' ;
 
@@ -25,16 +31,16 @@ const Asteroid = ({ item }) => {
       />
       <div className="wrapper-asteroid-data">
         <span className="name-asteroid">
-          {item.name}
+          {nameAsteroid(item)}
         </span>
         <span className="text-about-asteroid">
-          Дата {item.close_approach_data[0]["close_approach_date"]}
+          Дата {dateAsteroid(item)}
         </span>
         <span className="text-about-asteroid">
-          Расстояние {item.close_approach_data[0].miss_distance["lunar"]}
+          Расстояние {distanceAsteroidLunar(item)} км
         </span>
         <span className="text-about-asteroid">
-          Размер {item.estimated_diameter["meters"].estimated_diameter_max/2 + item.estimated_diameter["meters"].estimated_diameter_min/2}
+          Размер {sizeAsteroid(item)} м
         </span>
       </div>
       <div className="wrapper-destroy-asteroid">
