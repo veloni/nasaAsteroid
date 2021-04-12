@@ -6,39 +6,31 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 
 import './RenderAsteroids.scss' ;
 
-const RenderAsteroids = ({ dataAsteroids }) => {
-  let lenghtRender = 0;
-
-  const [stateLenghtRender, setStateLenghtRender] = useState(3);
+const RenderAsteroids = ({ 
+  dataAsteroids, 
+  isLunarDistance,
+  isAsteroidDangerous,
+  isOpenAboutAsteroid,
+  setIsOpenAboutAsteroid,
+  openAboutAsteroid,
+}) => {
 
   return (
     <div 
     className="wrapper-asteroid"
   > 
-    <button
-      onClick={(e) => setStateLenghtRender(stateLenghtRender+1)}
-    >
-    </button>
-
-    {dataAsteroids && Object.keys(dataAsteroids.near_earth_objects).map(function(keyNasa) {
-      return(
-        dataAsteroids.near_earth_objects[keyNasa].map(function(item) {
-          if (lenghtRender < stateLenghtRender){
-            lenghtRender++;
-            return(
-              <Asteroid
-                item={item}
-              />
-            )
-          }
-          else { 
-          return(
-            null
-            )
-          }
-        })
-        )
-      })} 
+    {dataAsteroids && Object.keys(dataAsteroids.near_earth_objects).map((keyNasa) => (
+        dataAsteroids.near_earth_objects[keyNasa].map((item) => (
+            <Asteroid
+              item={item}
+              isLunarDistance={isLunarDistance}
+              isAsteroidDangerous={isAsteroidDangerous}
+              isOpenAboutAsteroid={isOpenAboutAsteroid}
+              setIsOpenAboutAsteroid={setIsOpenAboutAsteroid}
+              openAboutAsteroid={openAboutAsteroid}
+            />
+        ))  
+      ))}
     </div>
   )
 };

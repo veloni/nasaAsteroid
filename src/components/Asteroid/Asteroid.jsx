@@ -7,54 +7,96 @@ import {
   nameAsteroid,
   dateAsteroid, 
   distanceAsteroidLunar,
+  distanceAsteroidKillometr,
   sizeAsteroid,
+  isDangerousAsteroid,
+  sizeAsteroidSvg,
 }  from '../../helper';
-
 
 import './Asteroid.scss' ;
 
-const Asteroid = ({ item }) => {
+const Asteroid = ({ 
+  item,
+  isLunarDistance,
+  isAsteroidDangerous,
+  isOpenAboutAsteroid,
+  setIsOpenAboutAsteroid,
+  openAboutAsteroid,
+}) => {
 
   return (
-    <div 
-      className={item.is_potentially_hazardous_asteroid ? "dangerous-asteroid-box box-asteroid" : "dont-dangerous-asteroid-box box-asteroid" }
-    > 
-      <img
-        alt="dino"
-        className="dino"
-        src={Dino}
-      />
-      <img
-        alt="asteroid"
-        className="asteroid"
-        src={AsteroidSvg}
-      />
-      <div className="wrapper-asteroid-data">
-        <span className="name-asteroid">
-          {nameAsteroid(item)}
-        </span>
-        <span className="text-about-asteroid">
-          Дата {dateAsteroid(item)}
-        </span>
-        <span className="text-about-asteroid">
-          Расстояние {distanceAsteroidLunar(item)} км
-        </span>
-        <span className="text-about-asteroid">
-          Размер {sizeAsteroid(item)} м
-        </span>
-      </div>
-      <div className="wrapper-destroy-asteroid">
-        <span className="appraisal">
-          Оценка: <br/> 
-          <span
-            className={item.is_potentially_hazardous_asteroid ? "dangerous-asteroid-title" : "dont-dangerous-asteroid-title" }
-          >
+    <div>
+      {isAsteroidDangerous && 
+      !isDangerousAsteroid(item) || 
+      <div 
+        className={isDangerousAsteroid(item) ? "dangerous-asteroid-box box-asteroid" : "dont-dangerous-asteroid-box box-asteroid"}
+        onClick={() => openAboutAsteroid(item)}
+      > 
+        <img
+          alt="dino"
+          className="dino"
+          src={Dino}
+        />
+        <img
+          alt="asteroid"
+          className="asteroid"
+          style={{
+            transform: `scale(${sizeAsteroidSvg(sizeAsteroid(item))})`,
+          }}
+          src={AsteroidSvg}
+        />
+        <div className="wrapper-asteroid-data">
+
+          <span className="name-asteroid">
+            {nameAsteroid(item)}
           </span>
-        </span>
-        <button className="button-destroy-asteroid">
-          На уничтожение
-        </button>
-      </div>
+
+          <div className="text-about-asteroid">
+            <span>
+              Дата
+            </span>
+          <span className="points"/>
+            <span>
+              {dateAsteroid(item)}
+            </span>
+          </div>
+
+          <div className="text-about-asteroid">
+            <span>
+              Расстояние
+            </span>
+            <span className="points"/>
+            <span>
+              {isLunarDistance && distanceAsteroidLunar(item)}
+              {!isLunarDistance && `${distanceAsteroidKillometr(item)} км`} 
+            </span>
+          </div>
+
+          <div className="text-about-asteroid">
+            <span>
+              Размер
+            </span>
+            <span className="points"/>
+            <span>
+            {sizeAsteroid(item)} м
+            </span>
+          </div>
+
+        </div>
+
+        <div className="wrapper-destroy-asteroid">
+          <span className="appraisal">
+            Оценка: <br/> 
+            <span
+              className={isDangerousAsteroid(item) ? "dangerous-asteroid-title" : "dont-dangerous-asteroid-title" }
+            >
+            </span>
+          </span>
+          <button className="button-destroy-asteroid">
+            На уничтожение
+          </button>
+        </div>
+      </div>}
     </div>
   )
 };

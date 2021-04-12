@@ -3,6 +3,7 @@
   width: 1280px;
   border: 1px solid black;
   display: flex;
+  overflow-y: scroll;
   justify-content: center;
 }
 
@@ -15,12 +16,12 @@
   padding-top: 56px;
   text-align: center;
   //styleName: Desktop / Body Regular;
-font-family: Helvetica;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px;
-letter-spacing: 0px;
-text-align: center;
+  font-family: Helvetica;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
 }
 

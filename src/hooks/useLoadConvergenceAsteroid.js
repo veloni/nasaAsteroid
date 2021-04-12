@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+/* import { useState, useEffect } from 'react';
 
-import axios from 'axios';
+import axios, { get } from 'axios';
 
 const useLoadDataAsteroid = () => {
   const [dataAsteroids, setDataAsteroids] = useState(null);
@@ -17,4 +17,4 @@ const useLoadDataAsteroid = () => {
   return [dataAsteroids];
 };
 
-export default useLoadDataAsteroid;
+export default useLoadDataAsteroid; */
