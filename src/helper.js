@@ -58,6 +58,39 @@ export const sizeAsteroidSvg = function(size) {
   }
 };
 
+export const orbitBody = (item) => (
+  item.orbiting_body
+);
+
+export const distanceKillometr = (item) => (
+  Math.round(item.miss_distance.kilometers)
+);
+
+export const velocityKillometr = (item) => (
+  Math.round(item.relative_velocity.kilometers_per_hour)
+);
+
+export const dateConverge = function(item) {
+  const dateAster = item["close_approach_date"].replace(/\-/g, ",");
+
+  const date = new Date(dateAster);
+  const monthNames = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"];
+
+  const numberDate = date.getDate();
+  const monthDate = monthNames[date.getMonth()];
+  const yearDate = date.getFullYear(); 
+
+  return `${numberDate} ${monthDate} ${yearDate}`
+};
+
+export const nameAsteroidBasket = function(item) {
+  const regExp = /\(([^)]+)\)/;
+  const Name = item.arrayBasket.name && regExp.exec(item.arrayBasket.name);
+
+  return Name[1]
+};
+
+ 
 
 
 

@@ -2,21 +2,31 @@ import React from 'react'
 
 import Header from '../Header/Header';
 import Switcher from '../Switcher/Switcher';
-import AboutAsteroid from '../AboutAsteroid/AboutAsteroid';
-import RenderAsteroids from '../RenderAsteroids/RenderAsteroids';
-import BasketDestroyAsteroid from '../BasketDestroyAsteroid/BasketDestroyAsteroid';
+import AboutAsteroid from './AboutAsteroid/AboutAsteroid';
+import RenderAsteroids from './RenderAsteroids/RenderAsteroids';
+import BasketDestroyAsteroid from './BasketDestroyAsteroid/BasketDestroyAsteroid';
 
 import useLoadDataAsteroids from '../../hooks/useLoadDataAsteroids';
 import useSwitcherDistance from '../../hooks/useSwitcherDistance';
 import useOpenComponent from '../../hooks/useOpenComponent';
-import useloadToBasket from '../../hooks/useloadToBasket';
+import useLoadBasket from '../../hooks/useLoadDataBasket';
 
 import './Body.scss' 
 
 const Body = () => {
-  const [dataAsteroids] = useLoadDataAsteroids();
+  const [
+    dataAsteroids,
+    setDataAsteroid,
+  ] = useLoadDataAsteroids();
 
-  const [] = useloadToBasket();
+  const [
+    destroyedAsteroid,
+    arrayBasket,
+    addAsteroidInBasket,
+    destroyAsteroid,
+  ] = useLoadBasket(
+    dataAsteroids, 
+    setDataAsteroid);
 
   const [
     isLunarDistance,
@@ -27,6 +37,7 @@ const Body = () => {
    ] = useSwitcherDistance();
 
    const [
+    isAsteroids,
     isOpenAboutAsteroid,
     setIsOpenAboutAsteroid,
     openAboutAsteroid,
@@ -43,8 +54,9 @@ const Body = () => {
         <Header
           openBasket={openBasket}
           openAsteroid={openAsteroid}
+          isAsteroids={isAsteroids}
         />
-        {!isOpenAboutAsteroid && !isBasket &&
+        {isAsteroids &&
           <div>
             <Switcher
               isLunarDistance={isLunarDistance}
@@ -55,22 +67,24 @@ const Body = () => {
             />
             <RenderAsteroids
               dataAsteroids={dataAsteroids}
+              destroyedAsteroid={destroyedAsteroid}
               isLunarDistance={isLunarDistance}
               isAsteroidDangerous={isAsteroidDangerous}
               isOpenAboutAsteroid={isOpenAboutAsteroid}
               setIsOpenAboutAsteroid={setIsOpenAboutAsteroid}
               openAboutAsteroid={openAboutAsteroid}
+              addAsteroidInBasket={addAsteroidInBasket}
             />
           </div>}
-          {isOpenAboutAsteroid && !isBasket &&
+          {isOpenAboutAsteroid &&
             <AboutAsteroid
               itemWhoOpen={itemWhoOpen}
-            />
-          }
-          {!isOpenAboutAsteroid && isBasket &&
+            />}
+          {isBasket &&
             <BasketDestroyAsteroid
-            />
-          }
+              arrayBasket={arrayBasket}
+              destroyAsteroid={destroyAsteroid}
+            />}
         <footer className="wrapper-footer">
           2021 © Все права и планета защищены
         </footer>

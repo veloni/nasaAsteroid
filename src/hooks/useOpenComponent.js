@@ -4,29 +4,29 @@ import axios from 'axios';
 
 const useOpenComponent = () => {
   const [isOpenAboutAsteroid, setIsOpenAboutAsteroid] = useState(false);
-  const [itemWhoOpen, setItemWhoOpen] = useState(null);
   const [isBasket, setIsBasket] = useState(false);
+  const [isAsteroids, setIsAsteroid] = useState(true);
 
-/*   useEffect(() => {
-  
-    document.title = `Вы нажали ${count} раз`;
-  }); */
-
+  const [itemWhoOpen, setItemWhoOpen] = useState(null);
 
   const openAboutAsteroid = (item) => {
-    setIsOpenAboutAsteroid(!isOpenAboutAsteroid); 
+    setIsOpenAboutAsteroid(true); 
+    setIsBasket(false)
+    setIsAsteroid(false);
 
     loadAboutConvergenceAsteroid(item);
   };
 
   const openBasket = () => {
-    setIsOpenAboutAsteroid(false);
-    setIsBasket(true);
+    setIsOpenAboutAsteroid(false); 
+    setIsBasket(true)
+    setIsAsteroid(false);
   };
 
   const openAsteroid = () => {
     setIsOpenAboutAsteroid(false);
-    setIsBasket(false);
+    setIsAsteroid(true);
+    setIsBasket(false); 
   };
 
   const loadAboutConvergenceAsteroid = (item) => {
@@ -38,6 +38,7 @@ const useOpenComponent = () => {
   };
 
   return [
+    isAsteroids,
     isOpenAboutAsteroid,
     setIsOpenAboutAsteroid,
     openAboutAsteroid,

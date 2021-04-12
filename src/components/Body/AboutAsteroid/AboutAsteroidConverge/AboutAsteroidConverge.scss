@@ -1,18 +1,18 @@
-
 .wrapper-converge-asteroid{
-  height: 50px;
   width: auto;
-  border: 1px solid black;
   margin-top: 20px;
   display: flex;
   justify-content: space-evenly;
+  background-color: rgb(176, 157, 177);
 }
 
 .wrapper-converge-text {
+  width: 200px;
+  height: 90px;
   display: flex;
+  text-align: center;
   align-items: center;
-  justify-content: space-around;
-  height: 50px;
-  width: 250px;
-  border: 1px solid black;
+  justify-content: center;
+  background-color: rgb(230, 214, 214);
+  font-size: 15px;
 }
