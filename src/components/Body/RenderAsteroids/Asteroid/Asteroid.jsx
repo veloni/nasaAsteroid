@@ -83,10 +83,9 @@ const Asteroid = ({
       </div>
       <div className="wrapper-destroy-asteroid">
         <span className="appraisal">
-          Оценка: <br/> 
-          <span
-            className={isDangerousAsteroid(item) ? "dangerous-asteroid-title" : "dont-dangerous-asteroid-title" }
-          >
+          Оценка:
+          <span className="text-is-dangerous" >
+            {isDangerousAsteroid(item) ? "Опасно" : "Не опасно"}
           </span>
         </span>
         <button 

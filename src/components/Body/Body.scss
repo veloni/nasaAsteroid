@@ -2,7 +2,7 @@
 /*   height: 986px; */
   width: 1280px;
   display: flex;
-  overflow-y: scroll;
+  overflow-y: auto;
   justify-content: center;
   align-items: center;
 }
@@ -13,7 +13,8 @@
 }
 
 .wrapper-footer {
-  padding-top: 56px;
+  padding-bottom: 10px;
+  padding-top: 10px;
   text-align: center;
   //styleName: Desktop / Body Regular;
   font-family: Helvetica;

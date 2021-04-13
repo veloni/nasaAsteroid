@@ -7,7 +7,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between; 
-  padding-top: 10px; 
 }
 
 .dino {
@@ -86,6 +85,14 @@
 
 .appraisal {
   text-align: center;
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.text-is-dangerous {
+  font-weight: bold;
 }
 
 .dangerous-asteroid-title::before {

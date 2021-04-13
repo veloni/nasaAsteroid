@@ -1,3 +1,7 @@
 .wrapper-asteroid {
   padding-bottom: 10px;
 }
+
+.wrapper-asteroid:last-child {
+  padding-bottom: 0px;
+}

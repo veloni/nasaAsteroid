@@ -10,20 +10,43 @@ import {
 
 import './AboutAsteroidConverge.scss' 
 
-const AboutAsteroidConverge = ({item}) => (
+const AboutAsteroidConverge = ({item,index}) => (
   <div className="wrapper-converge-asteroid"> 
-    <span className="wrapper-converge-text">
-      {`Дата максимального сближения ${dateConverge(item)}`}
+    <span className="wrapper-converge-id">
+      {index + 1}
     </span>
-    <span className="wrapper-converge-text">
-      {`Скорость относительно земли ${velocityKillometr(item)}`}
-    </span>
-    <span className="wrapper-converge-text">
-      {`Расстояние до Земли ${distanceKillometr(item)}`}
-    </span>
-    <span className="wrapper-converge-text">
-      {`Вокруг чьей орбиты летит ${orbitBody(item)}`}
-    </span>
+    <div className="wrapper-converge-text">
+      <span>
+        Дата максимального сближения:
+      </span>
+      <span>
+        {dateConverge(item)}
+      </span>
+    </div>
+    <div className="wrapper-converge-text">
+      <span>
+        Скорость относительно земли:
+      </span>
+      <span>
+        {velocityKillometr(item)}
+      </span>
+    </div>
+    <div className="wrapper-converge-text">
+      <span>
+        Расстояние до Земли:
+      </span>
+      <span>
+        {distanceKillometr(item)}
+      </span>
+    </div>
+    <div className="wrapper-converge-text">
+      <span>
+        Вокруг чьей орбиты летит:
+      </span>
+      <span>
+        {orbitBody(item)}
+      </span>
+    </div>
   </div>
 );
 

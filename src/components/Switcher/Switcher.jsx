@@ -11,13 +11,17 @@ const Switcher = ({
 }) => (
   <div className="wrapper-switcher">
     <div className="swither-check-box">
-      <input 
-        className="check-box"
-        type="checkbox"
-        checked={isAsteroidDangerous}
-        onClick={() => setIsAsteroidDangerous(!isAsteroidDangerous)}
-      />
-      Показать только опасные
+      <div className="wrapper-check-box">
+        <input 
+          className="check-box"
+          type="checkbox"
+          checked={isAsteroidDangerous}
+          onClick={() => setIsAsteroidDangerous(!isAsteroidDangerous)}
+        />  
+      </div>
+      <span className="text-check-box">
+        Показать только опасные
+      </span>
     </div>
     <div className="wrapper-active-distance">
       Расстояние
@@ -25,13 +29,15 @@ const Switcher = ({
         className={isLunarDistance ? "text-active-distance" : "text-dont-active-distance"}
         onClick={() => switchToKillometr()}
       > 
-      в километрах, 
+        &nbsp;
+        в километрах, 
       </span>
+      &nbsp;&nbsp;
       <span
         className={!isLunarDistance ? "text-active-distance" : "text-dont-active-distance"}
         onClick={() => switchToLunar()}
       >
-      в дистанциях до луны
+       в дистанциях до луны
       </span>
     </div>
   </div>  
