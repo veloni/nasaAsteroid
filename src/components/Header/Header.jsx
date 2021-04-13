@@ -25,7 +25,7 @@ const Header = ({
           Астероиды 
         </span> 
         <span
-         className={isAsteroids ? "text-active-distance" : "text-dont-active-distance"}
+         className={isAsteroids ? "text-active-distance text-switcher" : "text-dont-active-distance text-switcher"}
           onClick={() => openBasket()}
         >
           Уничтожение

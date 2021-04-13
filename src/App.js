@@ -2,7 +2,7 @@ import React from 'react';
 
 import Body from './components/Body/Body';
 
-import './App.css';
+import './App.scss';
 
 const App = () => (
   <section className="wrapper-main-section">

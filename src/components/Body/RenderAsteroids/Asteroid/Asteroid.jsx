@@ -22,25 +22,29 @@ const Asteroid = ({
   openAboutAsteroid,
   addAsteroidInBasket,
 }) => (
-  <div>
+  <div
+    className="wrapper-asteroid"
+  >
     {isAsteroidDangerous &&
     !isDangerousAsteroid(item) || 
     <div 
       className={isDangerousAsteroid(item) ? "dangerous-asteroid-box box-asteroid" : "dont-dangerous-asteroid-box box-asteroid"}
     > 
-      <img
-        alt="dino"
-        className="dino"
-        src={Dino}
-      />
-      <img
-        alt="asteroid"
-        className="asteroid"
-        style={{
-          transform: `scale(${sizeAsteroidSvg(sizeAsteroid(item))})`,
-        }}
-        src={AsteroidSvg}
-      />
+      <div className="wrapper-dino-asteroid">
+          <img
+            alt="dino"
+            className="dino"
+            src={Dino}
+          />
+        <img
+          alt="asteroid"
+          className="asteroid"
+          style={{
+            transform: `scale(${sizeAsteroidSvg(sizeAsteroid(item))})`,
+          }}
+          src={AsteroidSvg}
+        />
+      </div>
       <div className="wrapper-asteroid-data">
         <span 
           className="name-asteroid"

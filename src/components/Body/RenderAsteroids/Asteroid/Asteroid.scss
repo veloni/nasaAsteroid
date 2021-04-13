@@ -1,6 +1,5 @@
 .box-asteroid {
   height: 200px;
-  width: 920px;
   border: 1px solid black;
   border-radius: 15px;
   position: relative;
@@ -8,7 +7,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between; 
-  margin-top: 20px;
+  padding-top: 10px; 
 }
 
 .dino {

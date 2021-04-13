@@ -19,7 +19,7 @@ const RenderAsteroids = ({
   destroyedAsteroid,
 }) => (
   <div 
-    className="wrapper-asteroid"
+    
   > 
     {dataAsteroids && Object.keys(dataAsteroids.near_earth_objects).map((keyNasa) => (
       dataAsteroids.near_earth_objects[keyNasa].map((item) => (

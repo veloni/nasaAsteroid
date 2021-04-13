@@ -1,0 +1,146 @@
+.wrapper-main-section {
+/*   height: auto; 
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;    */
+}
+
+@media (min-device-width: 1250px) {
+  .wrapper-main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+  }
+}
+ @media (max-device-width: 400px) {
+  .wrapper-header {
+    height: 300px;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .wrapper-swticher {
+    padding-top: 0px;
+  }
+
+  .wrapper-left-title {
+    width: auto;
+    justify-content: space-around;
+  }
+  
+  .header-main-title {
+    font-size: 5rem; 
+  }
+
+  .header-title-about {
+    height: auto;
+    font-size: 2rem;
+  }
+
+  .text-switcher {
+    font-size: 3rem;
+  }
+
+  .wrapper-switcher {
+    width: auto;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    font-size: 25px;
+  }
+
+  .box-asteroid {
+    height: 1200px; 
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+
+  .wrapper-active-distance {
+    font-size: 3rem;
+  }
+
+  .wrapper-dino-asteroid {
+    position: relative;
+    height: 550px;
+    width: 100%;
+  } 
+
+  .wrapper-asteroid-data {
+    margin-left: 0px;
+    height: 400px;
+    width: 100%;
+    background-color: white;
+  }
+
+  .wrapper-asteroid {
+    width: 100%;
+  }
+
+  .appraisal {
+    font-size: 3rem;
+  }
+
+  .button-destroy-asteroid {
+    font-size: 3rem;
+    height: 150px;
+    width: 450px;
+    border-radius: 100px;
+  }
+
+  .name-asteroid {
+    font-size: 3rem;
+    position: absolute;
+    top: 34%;
+    left: 5%;
+  }
+
+  .text-about-asteroid {
+    font-size: 3rem;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .points{  
+    border-bottom: 6px dotted black;
+    margin-bottom: 0px;
+  }
+
+  .dino {
+    right: 10;
+    padding-right: 880px;
+    transform: scale(-1,1);  
+    height: 150px;
+    width: 150px;
+  }
+
+  .wrapper-destroy-asteroid {
+    height: 400px;
+    width: 100%;
+    background: white;
+    justify-content: space-evenly;
+  }
+
+  .asteroid {
+    top: 100px;
+  }
+
+  .wrapper-footer {
+    font-size: 2rem;
+  }
+
+  .wrapper-switcher {
+    height: 250px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 2.5rem;
+  }
+
+  .swither-check-box{
+    font-size: 3rem;
+  }
+
+} 

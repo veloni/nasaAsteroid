@@ -57,7 +57,7 @@ const Body = () => {
           isAsteroids={isAsteroids}
         />
         {isAsteroids &&
-          <div>
+          <div className="wrapper-switcher-render">
             <Switcher
               isLunarDistance={isLunarDistance}
               switchToLunar={switchToLunar}

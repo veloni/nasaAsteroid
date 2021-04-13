@@ -10,15 +10,16 @@ const Switcher = ({
   setIsAsteroidDangerous,
 }) => (
   <div className="wrapper-switcher">
-    <span>
+    <div className="swither-check-box">
       <input 
+        className="check-box"
         type="checkbox"
         checked={isAsteroidDangerous}
         onClick={() => setIsAsteroidDangerous(!isAsteroidDangerous)}
       />
       Показать только опасные
-    </span>
-    <div>
+    </div>
+    <div className="wrapper-active-distance">
       Расстояние
       <span
         className={isLunarDistance ? "text-active-distance" : "text-dont-active-distance"}
