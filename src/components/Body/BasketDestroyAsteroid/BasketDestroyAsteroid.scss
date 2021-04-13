@@ -1,6 +1,7 @@
 .wrapper-basket {
-  height: 702px;
-  width: 920px;
+  height: auto;
+  overflow-x: none;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,9 +9,11 @@
 }
 
 .summoning-chack {
+  margin-top: 10px;
   cursor: pointer;
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
+  height: 70px;
+  width: 150px;
+  font-size: 25px;
+  border-radius: 25px;
   background-color: rgb(221, 111, 111);
 }

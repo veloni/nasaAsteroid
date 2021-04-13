@@ -52,6 +52,11 @@
   margin-top: 8px;
 }
 
+.button-destroy-asteroid:hover {
+  background-color: #d63e18;
+  border-color: #d63e18;
+}
+
 .name-asteroid {
   font-family: Helvetica;
   font-size: 24px;
@@ -62,6 +67,10 @@
   text-align: left;
   text-decoration: underline;
   cursor: pointer;
+}
+
+.name-asteroid:hover {
+  color: blue;
 }
 
 .text-about-asteroid {

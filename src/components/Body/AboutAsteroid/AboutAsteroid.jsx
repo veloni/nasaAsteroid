@@ -23,10 +23,10 @@ const AboutAsteroid = ({ itemWhoOpen }) => (
     <div className="main-wrapper-data"> 
       <div className="wrapper-data">
         <span className="wrapper-text">
-          {`В дистанциях до луны ${distanceAsteroidLunar(itemWhoOpen)}`}
+          {`В дистанциях до луны: ${distanceAsteroidLunar(itemWhoOpen)}`}
         </span>
         <span className="wrapper-text">
-          {`Дистанция ${distanceAsteroidKillometr(itemWhoOpen)}км`}
+          {`Дистанция: ${distanceAsteroidKillometr(itemWhoOpen)}км`}
         </span>
         <span className="wrapper-text">
           {isDangerousAsteroid(itemWhoOpen) ? "Это опасный астероид" : "Это не опасный астероид"}
@@ -34,13 +34,13 @@ const AboutAsteroid = ({ itemWhoOpen }) => (
       </div>
       <div className="wrapper-data">
         <span className="wrapper-text">
-          {`Размер ${sizeAsteroid(itemWhoOpen)}м`}
+          {`Размер: ${sizeAsteroid(itemWhoOpen)}м`}
         </span>
         <span className="wrapper-text">
-          {`Магнитуда астероида ${absoluteMagnitudeAsteroid(itemWhoOpen)}`}
+          {`Магнитуда астероида: ${absoluteMagnitudeAsteroid(itemWhoOpen)}`}
         </span> 
         <span className="wrapper-text">
-          {`id астероида ${idAsteroid(itemWhoOpen)}`}
+          {`id астероида: ${idAsteroid(itemWhoOpen)}`}
         </span> 
       </div> 
     </div>

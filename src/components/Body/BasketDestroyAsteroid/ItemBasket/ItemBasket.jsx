@@ -12,9 +12,9 @@ const ItemBasket = (item) => (
       {nameAsteroidBasket(item)} 
     </span> 
     <span className="chuck-noris">
-     Будет Уничтожен лично Чаком Норисом
+      &nbsp; Будет Уничтожен лично Чаком 
     </span> 
   </div>
-)
+);
 
 export default ItemBasket;
