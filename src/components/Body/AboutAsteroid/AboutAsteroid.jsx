@@ -47,6 +47,7 @@ const AboutAsteroid = ({ itemWhoOpen }) => (
     <div className="wrapper-about-converge">  
       {!itemWhoOpen && 
         <img
+          alt="loader"
           src={loader}
         />
       } 

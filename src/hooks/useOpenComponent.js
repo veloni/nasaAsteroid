@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import axios from 'axios';
 
@@ -44,7 +44,6 @@ const useOpenComponent = () => {
     openAboutAsteroid,
     itemWhoOpen,
     isBasket, 
-    setIsBasket,
     openBasket,
     openAsteroid,
   ];

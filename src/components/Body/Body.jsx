@@ -43,7 +43,6 @@ const Body = () => {
     openAboutAsteroid,
     itemWhoOpen,
     isBasket, 
-    setIsBasket,
     openBasket,
     openAsteroid,
    ] = useOpenComponent();

@@ -91,6 +91,3 @@ export const nameAsteroidBasket = function(item) {
 };
 
  
-
-
-

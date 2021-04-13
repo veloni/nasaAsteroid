@@ -1,22 +1,15 @@
 .body-main-section {
-/*   height: 986px; */
-  width: 1280px;
+/*   width: 1280px; */
   display: flex;
   overflow-y: auto;
   justify-content: center;
   align-items: center;
 }
 
-.wrapper-body {
- /*  height: 986px; */
-/*   width: 920px; */
-}
-
 .wrapper-footer {
-   padding-bottom: 10px;
+  padding-bottom: 10px;
   padding-top: 10px; 
   text-align: center;
-  //styleName: Desktop / Body Regular;
   font-family: Helvetica;
   font-size: 16px;
   font-style: normal;
@@ -24,12 +17,5 @@
   line-height: 24px;
   letter-spacing: 0px;
   text-align: center;
-}
-
-.wrapper-switcher-render {
-/*   display: flex;
-  flex-direction: column; */
-/*   justify-content: center;
-  align-items: center; */
 }
 

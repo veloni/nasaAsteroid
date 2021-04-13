@@ -1,11 +1,3 @@
-.wrapper-main-section {
-/*   height: auto; 
-  width: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;    */
-}
-
 @media (min-device-width: 1250px) {
   .wrapper-main-section {
     display: flex;
@@ -26,6 +18,10 @@
 
   .wrapper-swticher {
     padding-top: 0px;
+  }
+
+  .body-main-section { 
+    width: 1280px;
   }
 
   .wrapper-left-title {
@@ -205,9 +201,6 @@
   .main-wrapper-data {
     height: auto;
     width: auto;
-  /*   display: flex;
-    align-items: center;
-    justify-content: center; */
   }
 
   .wrapper-data {
@@ -234,4 +227,17 @@
     width: 300px;
     font-size: 3rem;
   }
+
+  .empty-basket {
+    font-size: 4rem;
+  }
+
+  .chuck-noris {
+    font-size: 3rem;
+  }
+
+  .basket-name-asteroid {
+    font-size: 3rem;
+  }
+
 } 

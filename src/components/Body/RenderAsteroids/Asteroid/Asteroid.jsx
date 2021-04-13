@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import Dino from './svg/Dino.svg';
 import AsteroidSvg from './svg/Asteroid.svg'
@@ -22,20 +22,20 @@ const Asteroid = ({
   openAboutAsteroid,
   addAsteroidInBasket,
 }) => (
+  (isAsteroidDangerous &&
+  !isDangerousAsteroid(item)) || 
   <div
     className="wrapper-asteroid"
   >
-    {isAsteroidDangerous &&
-    !isDangerousAsteroid(item) || 
     <div 
       className={isDangerousAsteroid(item) ? "dangerous-asteroid-box box-asteroid" : "dont-dangerous-asteroid-box box-asteroid"}
     > 
       <div className="wrapper-dino-asteroid">
-          <img
-            alt="dino"
-            className="dino"
-            src={Dino}
-          />
+        <img
+          alt="dino"
+          className="dino"
+          src={Dino}
+        />
         <img
           alt="asteroid"
           className="asteroid"
@@ -95,9 +95,8 @@ const Asteroid = ({
           На уничтожение
         </button>
       </div>
-    </div>}
+    </div>
   </div>
 );
-
 
 export default Asteroid;

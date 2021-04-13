@@ -1,6 +1,4 @@
 .wrapper-header {
-/*   height: 157px; */
-/*   width: 920px; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -16,7 +14,6 @@
 }
 
 .header-main-title {
-  //styleName: Mobile / Сontrol Regular;
   font-family: Helvetica;
   font-size: 32px;
   font-style: normal;
@@ -27,7 +24,6 @@
 }
 
 .header-title-about {
-  //styleName: Mobile / Сontrol Regular;
   font-family: Helvetica;
   font-size: 16px;
   font-style: normal;

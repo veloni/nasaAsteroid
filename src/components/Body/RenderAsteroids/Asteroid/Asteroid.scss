@@ -74,7 +74,6 @@
 }
 
 .text-about-asteroid {
-  //styleName: Desktop / Body Regular;
   font-family: Helvetica;
   font-size: 16px;
   font-style: normal;
@@ -104,14 +103,14 @@
   font-weight: bold;
 }
 
-.dangerous-asteroid-title::before {
+/* .dangerous-asteroid-title::before {
   content: "Опасно";
 }
 
 .dont-dangerous-asteroid-title::before {
   content: "Не опасно";
 }
-
+ */
 .dangerous-asteroid-box {
   background: linear-gradient(90deg, #FFB199, #FF0844);
 }
@@ -119,4 +118,3 @@
 .dont-dangerous-asteroid-box {
   background: linear-gradient(90deg, #CFF37D, #7DE88C);
 }
-

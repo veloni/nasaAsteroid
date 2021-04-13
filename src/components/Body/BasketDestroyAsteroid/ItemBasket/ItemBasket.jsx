@@ -8,7 +8,7 @@ import {
 
 const ItemBasket = (item) => (
   <div className="wrapper-item-basket"> 
-    <span>
+    <span className="basket-name-asteroid">
       {nameAsteroidBasket(item)} 
     </span> 
     <span className="chuck-noris">

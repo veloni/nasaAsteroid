@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React from 'react';
 
 import Asteroid from './Asteroid/Asteroid';
 
@@ -18,12 +18,11 @@ const RenderAsteroids = ({
   addAsteroidInBasket,
   destroyedAsteroid,
 }) => (
-  <div 
-    
-  > 
+  <div > 
     {dataAsteroids && Object.keys(dataAsteroids.near_earth_objects).map((keyNasa) => (
-      dataAsteroids.near_earth_objects[keyNasa].map((item) => (
+      dataAsteroids.near_earth_objects[keyNasa].map((item, index) => (
         <Asteroid
+          key={index}
           item={item}
           destroyedAsteroid={destroyedAsteroid}
           isLunarDistance={isLunarDistance}
@@ -38,6 +37,7 @@ const RenderAsteroids = ({
      {
       !dataAsteroids && 
       <img
+        alt="loader"
         src={loader}
        />
      }
