@@ -21,8 +21,10 @@ const Asteroid = ({
   isAsteroidDangerous,
   openAboutAsteroid,
   addAsteroidInBasket,
+  isLenghtAsteroid,
 }) => (
-  (isAsteroidDangerous &&
+  (isLenghtAsteroid &&
+    isAsteroidDangerous &&
   !isDangerousAsteroid(item)) || 
   <div
     className="wrapper-asteroid"

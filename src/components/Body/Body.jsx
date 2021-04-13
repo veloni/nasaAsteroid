@@ -10,6 +10,7 @@ import useLoadDataAsteroids from '../../hooks/useLoadDataAsteroids';
 import useSwitcherDistance from '../../hooks/useSwitcherDistance';
 import useOpenComponent from '../../hooks/useOpenComponent';
 import useLoadBasket from '../../hooks/useLoadDataBasket';
+import useScroll from '../../hooks/useScroll';
 
 import './Body.scss' 
 
@@ -47,6 +48,11 @@ const Body = () => {
     openAsteroid,
    ] = useOpenComponent();
 
+   const [
+    isLenghtAsteroid,
+    setIsLenghtAsteroid,
+   ] = useScroll();
+
   return (
     <div className="body-main-section">
       <div className="wrapper-body">
@@ -73,6 +79,8 @@ const Body = () => {
               setIsOpenAboutAsteroid={setIsOpenAboutAsteroid}
               openAboutAsteroid={openAboutAsteroid}
               addAsteroidInBasket={addAsteroidInBasket}
+              isLenghtAsteroid={isLenghtAsteroid}
+              setIsLenghtAsteroid={setIsLenghtAsteroid}
             />
           </div>}
           {isOpenAboutAsteroid &&
