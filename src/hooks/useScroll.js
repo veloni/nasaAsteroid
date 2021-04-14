@@ -10,7 +10,7 @@ const useScroll = () => {
   }, [delay]); 
 
   const handleScroll = () => {
-    if (delay && window.scrollY + 500 < document.body.clientHeight) {  
+    if (delay && window.scrollY + document.body.clientHeight / 10 < document.body.clientHeight) {  
       setIsLenghtAsteroid(isLenghtAsteroid + 1);
       setDelay(false);
 

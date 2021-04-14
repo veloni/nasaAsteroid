@@ -1,7 +1,6 @@
 import React from 'react';
 
 import AboutAsteroidConverge from './AboutAsteroidConverge/AboutAsteroidConverge';
-import loader from './loader/chuck.jpg';
 
 import { 
   nameAsteroid,
@@ -48,11 +47,11 @@ const AboutAsteroid = ({ itemWhoOpen }) => (
       {!itemWhoOpen && 
         <img
           alt="loader"
-          src={loader}
         />
       } 
       {itemWhoOpen && itemWhoOpen.close_approach_data.map((item, index) => (
         <AboutAsteroidConverge
+          key={index}
           item={item}
           index={index}
         />

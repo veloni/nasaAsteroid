@@ -24,11 +24,9 @@ const Asteroid = ({
   isLenghtAsteroid,
 }) => (
   (isLenghtAsteroid &&
-    isAsteroidDangerous &&
+  isAsteroidDangerous &&
   !isDangerousAsteroid(item)) || 
-  <div
-    className="wrapper-asteroid"
-  >
+  <div className="wrapper-asteroid">
     <div 
       className={isDangerousAsteroid(item) ? "dangerous-asteroid-box box-asteroid" : "dont-dangerous-asteroid-box box-asteroid"}
     > 

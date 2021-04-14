@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import Header from '../Header/Header';
 import Switcher from '../Switcher/Switcher';
@@ -12,7 +12,7 @@ import useOpenComponent from '../../hooks/useOpenComponent';
 import useLoadBasket from '../../hooks/useLoadDataBasket';
 import useScroll from '../../hooks/useScroll';
 
-import './Body.scss' 
+import './Body.scss';
 
 const Body = () => {
   const [

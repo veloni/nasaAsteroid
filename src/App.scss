@@ -245,5 +245,82 @@
   .basket-name-asteroid {
     font-size: 1rem;
   }
-
 } 
+
+@media (min-device-width: 420px) {
+  @media (max-device-width: 1000px) {
+    .wrapper-body {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+    }
+
+    .button-destroy-asteroid {
+      width: 100%;
+    }
+
+    .box-asteroid {
+      width: 100%;
+    }
+    
+    .name-asteroid {
+      z-index: 1;
+    }
+
+    .wrapper-header {
+      display: flex;
+      max-width: 1000px;
+    }
+
+    .wrapper-switcher {
+      width: 100%;
+    }
+
+    .wrapper-asteroid-data {
+      width: 34%;
+    }
+
+    .text-about-asteroid {
+      font-size: 14px;
+    }
+
+    .wrapper-destroy-asteroid {
+      width: 15%;
+    }
+
+    .button-destroy-asteroid {
+      font-size: 10px;
+    }
+
+    .wrapper-header {
+      height: 150px;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    .wrapper-swticher {
+      padding-top: 0px;
+    }
+  }
+}
+
+@media (min-device-width: 420px) {
+  @media (max-device-width: 520px) {
+    .wrapper-asteroid-data {
+      margin-left: 10%;
+      width: 50%;
+    }
+
+    .wrapper-destroy-asteroid {
+      width: 20%;
+    }
+
+    .swither-check-box {
+      font-size: 12px;
+    }
+
+    .wrapper-active-distance {
+      font-size: 12px;
+    }
+  }
+}
