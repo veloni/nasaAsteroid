@@ -7,7 +7,7 @@ import {
   distanceAsteroidLunar,
   distanceAsteroidKillometr,
   sizeAsteroid,
-  isDangerousAsteroid,
+  styleAsteroidDangerous,
   absoluteMagnitudeAsteroid,
   idAsteroid
 } from '../../../helper';
@@ -28,7 +28,7 @@ const AboutAsteroid = ({ itemWhoOpen }) => (
           {`Дистанция: ${distanceAsteroidKillometr(itemWhoOpen)}км`}
         </span>
         <span className="wrapper-text">
-          {isDangerousAsteroid(itemWhoOpen) ? "Это опасный астероид" : "Это не опасный астероид"}
+          {styleAsteroidDangerous(itemWhoOpen) ? "Это опасный астероид" : "Это не опасный астероид"}
         </span>
       </div>
       <div className="wrapper-data">

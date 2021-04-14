@@ -39,7 +39,7 @@ export const sizeAsteroid = (item) => (
   item.estimated_diameter["meters"].estimated_diameter_min / 2)
 );
 
-export const isDangerousAsteroid = (item) => (
+export const styleAsteroidDangerous = (item) => (
   item.is_potentially_hazardous_asteroid
 );
 
@@ -48,13 +48,13 @@ export const sizeAsteroidSvg = function(size) {
     return 1
   }
   if (size < 500 ) { 
-    return 1.2
-  }
-  if (size < 1000 ) { 
     return 2
   }
-  if (size > 1000 ) { 
+  if (size < 1000 ) { 
     return 3
+  }
+  if (size > 1000 ) { 
+    return 4
   }
 };
 

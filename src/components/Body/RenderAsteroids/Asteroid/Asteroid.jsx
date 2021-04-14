@@ -9,7 +9,7 @@ import {
   distanceAsteroidLunar,
   distanceAsteroidKillometr,
   sizeAsteroid,
-  isDangerousAsteroid,
+  styleAsteroidDangerous,
   sizeAsteroidSvg,
 } from '../../../../helper';
 
@@ -21,14 +21,12 @@ const Asteroid = ({
   isAsteroidDangerous,
   openAboutAsteroid,
   addAsteroidInBasket,
-  isLenghtAsteroid,
 }) => (
-  (isLenghtAsteroid &&
-  isAsteroidDangerous &&
-  !isDangerousAsteroid(item)) || 
+  (isAsteroidDangerous &&
+  !styleAsteroidDangerous(item)) || 
   <div className="wrapper-asteroid">
     <div 
-      className={isDangerousAsteroid(item) ? "dangerous-asteroid-box box-asteroid" : "dont-dangerous-asteroid-box box-asteroid"}
+      className={styleAsteroidDangerous(item) ? "dangerous-asteroid-box box-asteroid" : "dont-dangerous-asteroid-box box-asteroid"}
     > 
       <div className="wrapper-dino-asteroid">
         <img
@@ -85,7 +83,7 @@ const Asteroid = ({
         <span className="appraisal">
           Оценка:
           <span className="text-is-dangerous" >
-            {isDangerousAsteroid(item) ? "Опасно" : "Не опасно"}
+            {styleAsteroidDangerous(item) ? "Опасно" : "Не опасно"}
           </span>
         </span>
         <button 
