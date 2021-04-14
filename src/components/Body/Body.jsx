@@ -21,7 +21,6 @@ const Body = () => {
   ] = useLoadDataAsteroids();
 
   const [
-    destroyedAsteroid,
     arrayBasket,
     addAsteroidInBasket,
     destroyAsteroid,
@@ -72,7 +71,6 @@ const Body = () => {
             />
             <RenderAsteroids
               dataAsteroids={dataAsteroids}
-              destroyedAsteroid={destroyedAsteroid}
               isLunarDistance={isLunarDistance}
               isAsteroidDangerous={isAsteroidDangerous}
               isOpenAboutAsteroid={isOpenAboutAsteroid}
@@ -82,6 +80,9 @@ const Body = () => {
               isLenghtAsteroid={isLenghtAsteroid}
               setIsLenghtAsteroid={setIsLenghtAsteroid}
             />
+            <footer className="wrapper-footer">
+              2021 © Все права и планета защищены
+            </footer>
           </div>}
           {isOpenAboutAsteroid &&
             <AboutAsteroid
@@ -92,9 +93,6 @@ const Body = () => {
               arrayBasket={arrayBasket}
               destroyAsteroid={destroyAsteroid}
             />}
-        <footer className="wrapper-footer">
-          2021 © Все права и планета защищены
-        </footer>
       </div>
     </div>
   )

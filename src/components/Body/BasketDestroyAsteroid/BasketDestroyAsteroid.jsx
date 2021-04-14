@@ -13,11 +13,14 @@ const BasketDestroyAsteroid = ({
     <div 
       className="wrapper-basket"
     > 
-      {arrayBasket.map((item) => (
-        <ItemBasket
-          arrayBasket={item}
-        />
-      ))}
+      <div className="wrapper-item-basket">
+        {arrayBasket.map((item, index) => (
+            <ItemBasket
+              key={index}
+              arrayBasket={item}
+            />
+        ))}
+      </div>
       <button
         className="summoning-chack"
         onClick={() => destroyAsteroid()}
@@ -26,9 +29,10 @@ const BasketDestroyAsteroid = ({
       </button>
     </div>}
     {arrayBasket.length === 0 &&
-    <span className="empty-basket">
-      Ничего не добавлено
-    </span>}
+      <span className="empty-basket">
+        Ничего не добавлено
+      </span>}
+    
   </div>
 );
 

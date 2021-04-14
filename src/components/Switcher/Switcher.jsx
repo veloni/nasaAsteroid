@@ -15,6 +15,7 @@ const Switcher = ({
         <input 
           className="check-box"
           type="checkbox"
+          checked={isAsteroidDangerous}
           onClick={() => setIsAsteroidDangerous(!isAsteroidDangerous)}
         />  
       </div>

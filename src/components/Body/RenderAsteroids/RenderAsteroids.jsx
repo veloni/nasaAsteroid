@@ -12,7 +12,6 @@ const RenderAsteroids = ({
   setIsOpenAboutAsteroid,
   openAboutAsteroid,
   addAsteroidInBasket,
-  destroyedAsteroid,
   isLenghtAsteroid,
 }) => {
   let qunaity = 0;
@@ -25,14 +24,15 @@ const RenderAsteroids = ({
             return(
               <Asteroid
                 key={index}
+                index={index}
                 item={item}
-                destroyedAsteroid={destroyedAsteroid}
                 isLunarDistance={isLunarDistance}
                 isAsteroidDangerous={isAsteroidDangerous}
                 isOpenAboutAsteroid={isOpenAboutAsteroid}
                 setIsOpenAboutAsteroid={setIsOpenAboutAsteroid}
                 openAboutAsteroid={openAboutAsteroid}
                 addAsteroidInBasket={addAsteroidInBasket}
+                keyNasa={keyNasa}
             />)
           } else {
             return null

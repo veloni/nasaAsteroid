@@ -21,6 +21,8 @@ const Asteroid = ({
   isAsteroidDangerous,
   openAboutAsteroid,
   addAsteroidInBasket,
+  index,
+  keyNasa,
 }) => (
   (isAsteroidDangerous &&
   !styleAsteroidDangerous(item)) || 
@@ -88,7 +90,7 @@ const Asteroid = ({
         </span>
         <button 
           className="button-destroy-asteroid"
-          onClick={() => addAsteroidInBasket(item)}
+          onClick={() => addAsteroidInBasket(item, index, keyNasa)}
         >
           На уничтожение
         </button>

@@ -7,7 +7,7 @@ import {
 } from '../../../../helper';
 
 const ItemBasket = (item) => (
-  <div className="wrapper-item-basket"> 
+  <div className="box-item-basket"> 
     <span className="basket-name-asteroid">
       {nameAsteroidBasket(item)} 
     </span> 
