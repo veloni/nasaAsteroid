@@ -26,14 +26,14 @@ const Body = () => {
     destroyAsteroid,
   ] = useLoadBasket(
     dataAsteroids, 
-    setDataAsteroid);
+    setDataAsteroid,
+  );
 
   const [
     isLunarDistance,
     isAsteroidDangerous, 
     setIsAsteroidDangerous,
-    switchToLunar,
-    switchToKillometr,
+    setIsLunarDistance,
    ] = useSwitcherDistance();
 
    const [
@@ -62,8 +62,7 @@ const Body = () => {
           <div className="wrapper-switcher-render">
             <Switcher
               isLunarDistance={isLunarDistance}
-              switchToLunar={switchToLunar}
-              switchToKillometr={switchToKillometr}
+              setIsLunarDistance={setIsLunarDistance}
               isAsteroidDangerous={isAsteroidDangerous}
               setIsAsteroidDangerous={setIsAsteroidDangerous}
             />

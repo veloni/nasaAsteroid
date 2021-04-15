@@ -6,9 +6,7 @@ import './App.scss';
 
 const App = () => (
   <section className="wrapper-main-section">
-   {/*  <div className="main-section"> */}
-      <Body/>
- {/*    </div> */}
+    <Body/>
   </section>
 );
 

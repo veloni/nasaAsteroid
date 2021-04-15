@@ -13,10 +13,10 @@ const BasketDestroyAsteroid = ({
     <div className="wrapper-basket"> 
       <div className="wrapper-item-basket">
         {arrayBasket.map((item, index) => (
-            <ItemBasket
-              key={index}
-              arrayBasket={item}
-            />
+          <ItemBasket
+            key={index}
+            arrayBasket={item}
+          />
         ))}
       </div>
       <button

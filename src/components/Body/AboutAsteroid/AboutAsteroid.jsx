@@ -10,7 +10,7 @@ import {
   sizeAsteroid,
   styleAsteroidDangerous,
   absoluteMagnitudeAsteroid,
-  idAsteroid
+  idAsteroid,
 } from '../../../helper';
 
 import './AboutAsteroid.scss' 

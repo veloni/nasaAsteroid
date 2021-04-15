@@ -4,8 +4,7 @@ import './Switcher.scss'
 
 const Switcher = ({
   isLunarDistance,
-  switchToLunar,
-  switchToKillometr,
+  setIsLunarDistance,
   isAsteroidDangerous, 
   setIsAsteroidDangerous,
 }) => (
@@ -27,7 +26,7 @@ const Switcher = ({
       Расстояние
       <span
         className={isLunarDistance ? "text-active-distance" : "text-dont-active-distance"}
-        onClick={() => switchToKillometr()}
+        onClick={() => setIsLunarDistance(false)}
       > 
         &nbsp;
         в километрах, 
@@ -35,7 +34,7 @@ const Switcher = ({
       &nbsp;&nbsp;
       <span
         className={!isLunarDistance ? "text-active-distance" : "text-dont-active-distance"}
-        onClick={() => switchToLunar()}
+        onClick={() => setIsLunarDistance(true)}
       >
        в дистанциях до луны
       </span>
