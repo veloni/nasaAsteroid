@@ -11,7 +11,7 @@ import './AboutAsteroidConverge.scss'
 
 const AboutAsteroidConverge = ({
   item,
-  index
+  index,
 }) => (
   <div className="wrapper-converge-asteroid"> 
     <span className="wrapper-converge-id">
@@ -30,7 +30,7 @@ const AboutAsteroidConverge = ({
         Скорость относительно земли:
       </span>
       <span>
-        {velocityKillometr(item)}
+        {`${velocityKillometr(item)} КМ/Ч`}
       </span>
     </div>
     <div className="wrapper-converge-text">
@@ -38,7 +38,7 @@ const AboutAsteroidConverge = ({
         Расстояние до Земли:
       </span>
       <span>
-        {distanceKillometr(item)}
+        {`${distanceKillometr(item)} КМ`}
       </span>
     </div>
     <div className="wrapper-converge-text">
@@ -52,4 +52,4 @@ const AboutAsteroidConverge = ({
   </div>
 );
 
-export default AboutAsteroidConverge
+export default AboutAsteroidConverge;
