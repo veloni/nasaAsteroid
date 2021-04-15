@@ -39,7 +39,6 @@ const Body = () => {
    const [
     isAsteroids,
     isOpenAboutAsteroid,
-    setIsOpenAboutAsteroid,
     openAboutAsteroid,
     itemWhoOpen,
     isBasket, 
@@ -49,7 +48,6 @@ const Body = () => {
 
    const [
     isLenghtAsteroid,
-    setIsLenghtAsteroid,
    ] = useScroll();
 
   return (
@@ -73,12 +71,9 @@ const Body = () => {
               dataAsteroids={dataAsteroids}
               isLunarDistance={isLunarDistance}
               isAsteroidDangerous={isAsteroidDangerous}
-              isOpenAboutAsteroid={isOpenAboutAsteroid}
-              setIsOpenAboutAsteroid={setIsOpenAboutAsteroid}
               openAboutAsteroid={openAboutAsteroid}
               addAsteroidInBasket={addAsteroidInBasket}
               isLenghtAsteroid={isLenghtAsteroid}
-              setIsLenghtAsteroid={setIsLenghtAsteroid}
             />
             <footer className="wrapper-footer">
               2021 © Все права и планета защищены

@@ -6,7 +6,7 @@ export const nameAsteroid = function(item) {
 };
 
 export const dateAsteroid = function(item) {
-  const dateAster = item.close_approach_data[0]["close_approach_date"].replace(/\-/g, ",");
+  const dateAster = item.close_approach_data[0]["close_approach_date"].replace(",");
 
   const date = new Date(dateAster);
   const monthNames = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"];
@@ -71,7 +71,7 @@ export const velocityKillometr = (item) => (
 );
 
 export const dateConverge = function(item) {
-  const dateAster = item["close_approach_date"].replace(/\-/g, ",");
+  const dateAster = item["close_approach_date"].replace(",");
 
   const date = new Date(dateAster);
   const monthNames = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"];

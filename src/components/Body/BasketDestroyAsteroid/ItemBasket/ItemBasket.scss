@@ -1,4 +1,4 @@
-.box-item-basket{
+.box-item-basket {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,4 +13,10 @@
   text-overflow: ellipsis;
   line-height: normal;
   color: rgb(201, 46, 46);
+}
+
+@media (max-device-width: 420px) {
+  .chuck-noris {
+    font-size: 1rem;
+  }
 }

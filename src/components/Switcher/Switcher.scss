@@ -19,3 +19,52 @@
   display: flex;
   flex-direction: row;
 }
+
+@media (max-device-width: 420px) {
+  .wrapper-switcher {
+    width: auto;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    font-size: 25px;
+  }
+
+  .swither-check-box{
+    font-size: 1rem;
+  }
+
+  .wrapper-active-distance {
+    font-size: 1rem;
+  }
+
+  .wrapper-check-box {
+    height: 10px;
+    width: 10px; 
+  }
+
+  .check-box {
+    height: 100%;
+    width: 100%;
+    outline: 2px solid black;
+  }
+
+  .text-check-box {
+    padding-left: 30px;
+  }
+}
+
+@media (min-device-width: 420px) and (max-device-width: 520px) {
+  .swither-check-box {
+    font-size: 12px;
+  }
+
+  .wrapper-active-distance {
+    font-size: 12px;
+  }
+}
+
+@media (min-device-width: 420px) and (max-device-width: 1000px)  {
+  .wrapper-switcher {
+    width: 100%;
+  }
+}

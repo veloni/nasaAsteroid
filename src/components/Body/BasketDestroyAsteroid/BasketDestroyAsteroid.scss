@@ -26,3 +26,37 @@
   align-items: center;
   justify-content: center;
 }
+
+@media (max-device-width: 420px) {
+  .wrapper-basket {
+    width: 100%;
+  }
+
+  .summoning-chack {
+    height: 50px;
+    width: 200px;
+    font-size: 1rem;
+  }
+
+  .empty-basket {
+    font-size: 1rem;
+  }
+
+  .wrapper-item-basket {
+    font-size: 1rem;
+    display: block;
+  }
+  
+}
+
+@media (min-device-width: 420px) and (max-device-width: 520px) {
+  .wrapper-item-basket {
+    font-size: 10px;
+  }
+}
+
+@media (min-device-width: 420px) and (max-device-width: 1000px) {
+  .wrapper-basket {
+    width: 100%;
+  }
+}

@@ -10,9 +10,7 @@ const BasketDestroyAsteroid = ({
 }) => (
   <div>
     {arrayBasket.length !== 0 && 
-    <div 
-      className="wrapper-basket"
-    > 
+    <div className="wrapper-basket"> 
       <div className="wrapper-item-basket">
         {arrayBasket.map((item, index) => (
             <ItemBasket
@@ -29,10 +27,11 @@ const BasketDestroyAsteroid = ({
       </button>
     </div>}
     {arrayBasket.length === 0 &&
+     <div className="wrapper-basket">
       <span className="empty-basket">
         Ничего не добавлено
-      </span>}
-    
+      </span>
+    </div>}
   </div>
 );
 

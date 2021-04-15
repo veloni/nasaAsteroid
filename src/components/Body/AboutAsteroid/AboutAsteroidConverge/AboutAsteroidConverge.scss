@@ -1,4 +1,4 @@
-.wrapper-converge-asteroid{
+.wrapper-converge-asteroid {
   width: auto;
   margin-top: 20px;
   display: flex;
@@ -31,4 +31,44 @@
   background-color: whitesmoke;
   border: 1px solid #CEE0F2;
   font-size: 15px;
+}
+
+@media (max-device-width: 420px) {
+  .wrapper-converge-asteroid {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .wrapper-converge-text {
+    margin-top: 10px;
+    font-size: 1rem;
+    height: 50px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wrapper-converge-id {
+    width: 100%;
+    border-radius: 0%;
+    font-size: 1rem;
+    background-color: rgb(189, 184, 184);
+  }
+}
+
+@media (min-device-width: 420px) and (max-device-width: 1000px)  {
+  .wrapper-converge-asteroid {
+    width: 100%;
+  }
+  .wrapper-converge-text {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .wrapper-converge-id {
+    border-radius: 100%;
+    width: 50px;
+    border-radius: 0;
+  }
 }

@@ -17,3 +17,21 @@
   text-align: center;
 }
 
+@media (max-device-width: 420px) {
+  .body-main-section { 
+    width: 420px;
+  }
+
+  .wrapper-footer {
+    display: flex;
+    justify-content: center;
+    height: 20px;
+    text-overflow: ellipsis;
+    line-height: normal;
+    font-size: 1rem;
+    display: flex;
+    text-align: center;
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
+}

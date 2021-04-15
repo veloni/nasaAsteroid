@@ -16,12 +16,12 @@ import {
 import './Asteroid.scss' ;
 
 const Asteroid = ({ 
+  index,
   item,
   isLunarDistance,
   isAsteroidDangerous,
   openAboutAsteroid,
   addAsteroidInBasket,
-  index,
   keyNasa,
 }) => (
   (isAsteroidDangerous &&

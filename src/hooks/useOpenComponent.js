@@ -40,7 +40,6 @@ const useOpenComponent = () => {
   return [
     isAsteroids,
     isOpenAboutAsteroid,
-    setIsOpenAboutAsteroid,
     openAboutAsteroid,
     itemWhoOpen,
     isBasket, 

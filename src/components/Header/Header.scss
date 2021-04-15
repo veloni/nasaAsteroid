@@ -54,3 +54,55 @@
 .text-switcher {
   padding-right: 20px;
 }
+
+@media (max-device-width: 420px) {
+  .wrapper-header {
+    height: 160px;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .wrapper-left-title {
+    height: 50px;
+    width: auto;
+    justify-content: space-around;
+  }
+
+  .header-main-title {
+    font-size: 1.5rem; 
+  }
+
+  .header-title-about {
+    font-size: 1rem;
+    text-overflow: ellipsis;
+    line-height: normal;
+    padding-top: 20px;
+  }
+
+  .wrapper-swticher {
+    padding-top: 0px;
+  }
+
+  .text-switcher {
+    font-size: 1rem;
+  }
+}
+
+@media (min-device-width: 420px) and (max-device-width: 1000px) {
+  .wrapper-swticher {
+    width: 90%;
+  }
+
+  .wrapper-header {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    height: 150px;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .wrapper-swticher {
+    padding-top: 0px;
+  }
+}

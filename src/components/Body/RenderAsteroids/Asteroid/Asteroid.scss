@@ -85,7 +85,7 @@
   align-items: flex-end;
 }
 
-.points{  
+.points {  
   flex-grow: 1;
   margin-bottom: 5px;
   border-bottom: 1px dotted black;
@@ -109,4 +109,116 @@
 
 .dont-dangerous-asteroid-box {
   background: linear-gradient(90deg, #CFF37D, #7DE88C);
+}
+
+@media (max-device-width: 420px) {
+  .box-asteroid {
+    height: 400px; 
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .dino {
+    bottom: -2px;
+    padding-right: 300px;
+    transform: scale(-1,1);  
+    height: 50px;
+    width: 50px;
+  }
+
+  .asteroid {
+    top: 10px;
+  }
+
+  .wrapper-asteroid-data {
+    margin-left: 0px;
+    height: 200px;
+    width: 100%;
+    background-color: white;
+  }
+
+  .wrapper-destroy-asteroid {
+    width: 100%;
+    background: white;
+    justify-content: space-evenly;
+  }
+
+  .name-asteroid {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 29%;
+    left: 5%;
+  }
+
+  .button-destroy-asteroid {
+    font-size: 1rem;
+    height: 50px;
+    width: 150px;
+    border-radius: 100px;
+  }
+
+  .points {  
+    border-bottom: 2px dotted black;
+    margin-bottom: 0px;
+  }
+
+  .appraisal {
+    font-size: 1rem;
+  }
+
+  .text-about-asteroid {
+    font-size: 1rem;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-device-width: 420px) {
+  .wrapper-dino-asteroid {
+    position: relative;
+    height: 220px;
+    width: 100%;
+  } 
+}
+
+@media (min-device-width: 420px) and (max-device-width: 1000px) {
+  .box-asteroid {
+    width: 100%;
+  }
+
+  .wrapper-asteroid-data {
+    width: 34%;
+  }
+
+  .wrapper-destroy-asteroid {
+    width: 15%;
+  }
+
+  .button-destroy-asteroid {
+    width: 100%;
+    font-size: 10px;
+  }
+
+  .text-about-asteroid {
+    font-size: 14px;
+    z-index: 1;
+  }
+
+  .name-asteroid {
+    z-index: 1;
+  }
+}
+
+@media (min-device-width: 420px) and (max-device-width: 520px) {
+  .wrapper-destroy-asteroid {
+    width: 20%;
+  }
+
+  .wrapper-asteroid-data {
+    margin-left: 10%;
+    width: 50%;
+  }
 }

@@ -1,15 +1,14 @@
 import React from 'react';
 
 import Asteroid from './Asteroid/Asteroid';
+import Loader from '../../Loader/Loader';
 
 import './RenderAsteroids.scss' ;
 
 const RenderAsteroids = ({ 
-  dataAsteroids, 
+  dataAsteroids,
   isLunarDistance,
   isAsteroidDangerous,
-  isOpenAboutAsteroid,
-  setIsOpenAboutAsteroid,
   openAboutAsteroid,
   addAsteroidInBasket,
   isLenghtAsteroid,
@@ -28,8 +27,6 @@ const RenderAsteroids = ({
                 item={item}
                 isLunarDistance={isLunarDistance}
                 isAsteroidDangerous={isAsteroidDangerous}
-                isOpenAboutAsteroid={isOpenAboutAsteroid}
-                setIsOpenAboutAsteroid={setIsOpenAboutAsteroid}
                 openAboutAsteroid={openAboutAsteroid}
                 addAsteroidInBasket={addAsteroidInBasket}
                 keyNasa={keyNasa}
@@ -39,17 +36,7 @@ const RenderAsteroids = ({
           }
         })
       ))}
-      {!dataAsteroids && 
-       <div id="cube-loader">
-        <div className="caption">
-          <div className="cube-loader">
-            <div className="cube loader-1"></div>
-            <div className="cube loader-2"></div>
-            <div className="cube loader-4"></div>
-            <div className="cube loader-3"></div>
-          </div>
-        </div>
-      </div>}
+      {!dataAsteroids && <Loader/>}
     </div>
   );
 }

@@ -9,7 +9,10 @@ import {
 
 import './AboutAsteroidConverge.scss' 
 
-const AboutAsteroidConverge = ({item,index}) => (
+const AboutAsteroidConverge = ({
+  item,
+  index
+}) => (
   <div className="wrapper-converge-asteroid"> 
     <span className="wrapper-converge-id">
       {index + 1}
