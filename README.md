@@ -15,3 +15,5 @@
 7) Создавал с помощью `create-react-app`, запуск  `npm start`
 
 8) Во время сборки может ругаться `node-js`, в папке `build` находится собранный проект
+
+9) Ссылка на проект http://y91266wx.beget.tech/Nasa/index.html
